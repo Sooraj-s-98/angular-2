@@ -16,7 +16,6 @@ export class LeaderService {
   }
 
   getLeader(id: string): Observable<Leader> {
-    let id2 = id.toString()
     return of(LEADERS.filter((leader) => (leader.id  === id))[0]).pipe(delay(2000));
   }
 
